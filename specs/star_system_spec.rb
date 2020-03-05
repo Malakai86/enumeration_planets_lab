@@ -22,28 +22,28 @@ class TestStarSystem < Minitest::Test
     @solar_system = StarSystem.new("Solar System", @planets)
   end
 
-  # def test_has_name
-  #   assert_equal("Solar System", @solar_system.name)
-  # end
-  #
-  # def test_has_planets
-  #   assert_equal(9, @solar_system.planets.count)
-  # end
-  #
-  # def test_planet_names
-  #   expected_names = ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Pluto", "Saturn", "Uranus", "Venus"]
-  #   assert_equal(expected_names, @solar_system.planet_names)
-  # end
+  def test_has_name
+    assert_equal("Solar System", @solar_system.name)
+  end
+
+  def test_has_planets
+    assert_equal(9, @solar_system.planets.count)
+  end
+
+  def test_planet_names
+    expected_names = ["Earth", "Jupiter", "Mars", "Mercury", "Neptune", "Pluto", "Saturn", "Uranus", "Venus"]
+    assert_equal(expected_names, @solar_system.planet_names)
+  end
 
   def test_get_planet_by_name
     result = @solar_system.get_planet_by_name("Mars")
     assert_equal(@mars, result)
   end
-  
-  # def test_get_largest_planet
-  #   result = @solar_system.get_largest_planet
-  #   assert_equal(@jupiter, result)
-  # end
+
+  def test_get_largest_planet
+    result = @solar_system.get_largest_planet
+    assert_equal(@jupiter, result)
+  end
   #
   # def test_get_smallest_planet
   #   result = @solar_system.get_smallest_planet

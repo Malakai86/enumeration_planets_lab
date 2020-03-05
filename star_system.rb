@@ -22,7 +22,9 @@ def get_largest_planet()
   return planets.max {|current_planet, next_planet| current_planet.diameter <=> next_planet.diameter}
 end
 
-
+def get_smallest_planet()
+  return planets.min {|current_planet, next_planet| current_planet.diameter <=> next_planet.diameter}
+end
 
 
 
